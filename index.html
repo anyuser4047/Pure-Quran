@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pure Quran Academy - Online Islamic Education</title>
+
+    <!-- Google Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS File Connected -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Base styles (always included) -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/preloader.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="css/home.css" />
+    <!-- For home page -->
+    <link rel="stylesheet" href="css/about.css" />
+    <!-- For about page -->
+    <!-- etc. -->
+
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="quran-icon">
+        <i class="fas fa-quran"></i>
+      </div>
+      <div class="loading-text">Loading Pure Quran Academy...</div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo" onclick="showPage('home')">
+          <img src="images/logo.png" alt="Pure Quran Logo" />
+          Pure Quran
+        </a>
+        <nav class="navbar">
+          <a class="active" onclick="showPage('home')">Home</a>
+          <a onclick="showPage('about')">About</a>
+          <a onclick="showPage('courses')">Courses</a>
+          <a onclick="showPage('tutors')">Tutors</a>
+          <a onclick="showPage('contact')">Contact</a>
+
+          <!-- Show these when user is not logged in -->
+          <div class="auth-buttons" id="guest-buttons">
+            <a class="auth-btn login-btn" id="login-btn">Login</a>
+            <a class="auth-btn register-btn" id="register-btn">Register</a>
+          </div>
+
+          <!-- Show this when user is logged in -->
+          <div class="user-menu" id="user-menu" style="display: none">
+            <div class="user-avatar" id="user-avatar">AS</div>
+            <div class="dropdown-menu" id="dropdown-menu">
+              <a onclick="showDashboard('profile')"
+                ><i class="fas fa-user"></i> My Profile</a
+              >
+              <a onclick="showDashboard('courses')"
+                ><i class="fas fa-book-open"></i> My Courses</a
+              >
+              <a onclick="showDashboard('progress')"
+                ><i class="fas fa-chart-line"></i> My Progress</a
+              >
+              <a onclick="showDashboard('certificates')"
+                ><i class="fas fa-certificate"></i> Certificates</a
+              >
+              <a onclick="showDashboard('payments')"
+                ><i class="fas fa-credit-card"></i> Payments</a
+              >
+              <a href="#" id="logout-btn"
+                ><i class="fas fa-sign-out-alt"></i> Logout</a
+              >
+            </div>
+          </div>
+        </nav>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page-content active">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Learn Quran <span>Perfectly</span> Online
+            </h1>
+            <p class="hero-subtitle">
+              Join thousands of students worldwide learning the Holy Quran with
+              certified teachers from Al-Azhar University. Our personalized
+              online classes make Quran learning accessible to everyone.
+            </p>
+            <div class="hero-buttons">
+              <a onclick="showPage('contact')" class="cta-button"
+                >Start Learning</a
+              >
+              <a onclick="showPage('courses')" class="cta-button secondary"
+                >Browse Courses</a
+              >
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="quran-symbol">
+              <i class="fas fa-quran"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features">
+        <div class="container">
+          <h2 class="section-title">Why Choose Us</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-award"></i>
+              </div>
+              <h3>Certified Teachers</h3>
+              <p>
+                Learn from Al-Azhar graduates with Ijazah certification in Quran
+                recitation and memorization.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h3>Flexible Timing</h3>
+              <p>
+                Schedule classes at your convenient time with 24/7 availability
+                across time zones.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-user-friends"></i>
+              </div>
+              <h3>One-on-One</h3>
+              <p>
+                Personalized attention for effective learning with customized
+                lesson plans.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <h3>Certification</h3>
+              <p>
+                Receive recognized certificates upon course completion with
+                Ijazah for memorization.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-child"></i>
+              </div>
+              <h3>All Ages</h3>
+              <p>
+                Special programs for children and adults with age-appropriate
+                teaching methods.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <h3>Worldwide Access</h3>
+              <p>
+                Learn from anywhere in the world with our stable online learning
+                platform.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials">
+        <div class="container">
+          <h2 class="section-title">What Our Students Say</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "My son has improved tremendously in his Quran recitation since
+                joining Pure Quran Academy. The teachers are patient and
+                knowledgeable, making learning enjoyable."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">FA</div>
+                <div class="author-info">
+                  <h4>Fatima Ahmed</h4>
+                  <p>Parent, USA</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "As a working professional, the flexible schedule allows me to
+                continue my Hifz journey. I've memorized 5 juz so far with their
+                systematic approach."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">MS</div>
+                <div class="author-info">
+                  <h4>Mohammed Saleh</h4>
+                  <p>Student, UK</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "The Tajweed course transformed my recitation. The teachers pay
+                attention to every detail and provide constructive feedback to
+                improve."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">AA</div>
+                <div class="author-info">
+                  <h4>Aisha Abdullah</h4>
+                  <p>Student, Canada</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page-content">
+      <!-- About Hero Section -->
+      <section class="about-hero">
+        <div class="container">
+          <h1>About Our Academy</h1>
+          <p>
+            Pure Quran Academy was founded in 2015 with the mission to make
+            authentic Quran education accessible to everyone worldwide while
+            maintaining the highest standards of Islamic teaching.
+          </p>
+
+          <div class="mission-vision">
+            <div class="mission-card">
+              <div class="feature-icon">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <h2>Our Mission</h2>
+              <p>
+                To provide authentic Quranic education through qualified
+                teachers using modern technology while preserving traditional
+                teaching methods and tajweed rules.
+              </p>
+            </div>
+            <div class="vision-card">
+              <div class="feature-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h2>Our Vision</h2>
+              <p>
+                To become the leading online Quran academy producing Huffaz and
+                Islamic scholars who understand, implement and teach the Quran
+                with excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="stats">
+        <div class="container">
+          <h2 class="section-title" style="color: white">Our Achievements</h2>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <h3>500+</h3>
+              <p>Students Enrolled</p>
+            </div>
+            <div class="stat-item">
+              <h3>20+</h3>
+              <p>Certified Teachers</p>
+            </div>
+            <div class="stat-item">
+              <h3>15+</h3>
+              <p>Countries Served</p>
+            </div>
+            <div class="stat-item">
+              <h3>50+</h3>
+              <p>Huffaz Graduated</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="team">
+        <div class="container">
+          <h2 class="section-title">Our Founders</h2>
+          <div class="team-grid">
+            <div class="team-member">
+              <img
+                src="images/hafiz-abdul.png"
+                alt="Hafiz Abdul Hadi"
+                class="team-avatar"
+              />
+              <h3>Hafiz Abdul Hadi</h3>
+              <p>Co-Founder & Head of Education</p>
+              <p>
+                Graduate of Punjab University with Ijazah in Hafs 'an 'Asim.
+                Over 10 years of teaching experience in Quran memorization and
+                tajweed.
+              </p>
+              <div class="team-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <div class="team-member">
+              <img
+                src="images/dr.amina-khan.png"
+                alt="Dr. Amina Khan"
+                class="team-avatar"
+              />
+              <h3>Dr. Amina Khan</h3>
+              <p>Co-Founder & Director</p>
+              <p>
+                PhD in Islamic Studies from GC University with specialization in
+                Quranic exegesis. Author of several books on Quranic sciences.
+              </p>
+              <div class="team-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <div class="team-member">
+              <img
+                src="images/ali-raza-warriach.png"
+                alt="Ali Raza Warriach"
+                class="team-avatar"
+              />
+              <h3>Ali Raza Warriach</h3>
+              <p>Head of Tajweed Department</p>
+              <p>
+                Graduate of Al-Azhar University with Ijazah in multiple qira'at.
+                Expert in tajweed rules and Quranic phonetics.
+              </p>
+              <div class="team-social">
+                <a href="https://www.facebook.com/ali.raza.warriach.official"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  href="https://x.com/alirazawariach?t=AbwPzEiNG61TQ47G7BBKJw&s=09"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="https://pk.linkedin.com/in/alirazawarriach"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Courses Page -->
+    <div id="courses" class="page-content">
+      <!-- Courses Hero -->
+      <section class="courses-hero">
+        <div class="container">
+          <h1>Our Comprehensive Courses</h1>
+          <p>
+            Choose from our structured programs designed for all levels of
+            learners, from beginners to advanced students
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Courses Section -->
+      <section class="course-categories-section">
+        <div class="container">
+          <h2 class="section-title">Course Categories</h2>
+          <div class="course-categories">
+            <div class="course-category">
+              <div class="category-header">
+                <i class="fas fa-book-quran"></i>
+                <h2>Quran Recitation</h2>
+              </div>
+              <div class="course-list">
+                <li>
+                  Basic Quran Reading
+                  <span class="course-duration">4 months</span>
+                  <span class="course-price">$49/mo</span>
+                </li>
+                <li>
+                  Intermediate Recitation
+                  <span class="course-duration">6 months</span>
+                  <span class="course-price">$59/mo</span>
+                </li>
+                <li>
+                  Advanced Recitation
+                  <span class="course-duration">8 months</span>
+                  <span class="course-price">$69/mo</span>
+                </li>
+                <a href="#" class="course-btn">View Details</a>
+              </div>
+            </div>
+            <div class="course-category">
+              <div class="category-header">
+                <i class="fas fa-mosque"></i>
+                <h2>Tajweed</h2>
+              </div>
+              <div class="course-list">
+                <li>
+                  Basic Tajweed Rules
+                  <span class="course-duration">3 months</span>
+                  <span class="course-price">$59/mo</span>
+                </li>
+                <li>
+                  Applied Tajweed <span class="course-duration">6 months</span>
+                  <span class="course-price">$69/mo</span>
+                </li>
+                <li>
+                  Tajweed Mastery
+                  <span class="course-duration">12 months</span>
+                  <span class="course-price">$79/mo</span>
+                </li>
+                <a href="#" class="course-btn">View Details</a>
+              </div>
+            </div>
+            <div class="course-category">
+              <div class="category-header">
+                <i class="fas fa-brain"></i>
+                <h2>Memorization</h2>
+              </div>
+              <div class="course-list">
+                <li>
+                  Short Surahs <span class="course-duration">3 months</span>
+                  <span class="course-price">$69/mo</span>
+                </li>
+                <li>
+                  Juz Amma <span class="course-duration">6 months</span>
+                  <span class="course-price">$79/mo</span>
+                </li>
+                <li>
+                  Full Hifz Program
+                  <span class="course-duration">2-3 years</span>
+                  <span class="course-price">$99/mo</span>
+                </li>
+                <a href="#" class="course-btn">View Details</a>
+              </div>
+            </div>
+            <div class="course-category">
+              <div class="category-header">
+                <i class="fas fa-language"></i>
+                <h2>Translation</h2>
+              </div>
+              <div class="course-list">
+                <li>
+                  Word-to-Word Translation
+                  <span class="course-duration">6 months</span>
+                  <span class="course-price">$59/mo</span>
+                </li>
+                <li>
+                  Tafseer ul-Quran
+                  <span class="course-duration">12 months</span>
+                  <span class="course-price">$69/mo</span>
+                </li>
+                <li>
+                  Advanced Tafseer
+                  <span class="course-duration">18 months</span>
+                  <span class="course-price">$79/mo</span>
+                </li>
+                <a href="#" class="course-btn">View Details</a>
+              </div>
+            </div>
+            <div class="course-category">
+              <div class="category-header">
+                <i class="fas fa-child"></i>
+                <h2>Kids Program</h2>
+              </div>
+              <div class="course-list">
+                <li>
+                  Quran for Kids <span class="course-duration">Ongoing</span>
+                  <span class="course-price">$49/mo</span>
+                </li>
+                <li>
+                  Tajweed for Kids
+                  <span class="course-duration">6 months</span>
+                  <span class="course-price">$59/mo</span>
+                </li>
+                <li>
+                  Hifz for Kids <span class="course-duration">Custom</span>
+                  <span class="course-price">$79/mo</span>
+                </li>
+                <a href="#" class="course-btn">View Details</a>
+              </div>
+            </div>
+            <div class="course-category">
+              <div class="category-header">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Ijazah</h2>
+              </div>
+              <div class="course-list">
+                <li>
+                  Qira'ah Certification
+                  <span class="course-duration">Custom</span>
+                  <span class="course-price">$99/mo</span>
+                </li>
+                <li>
+                  Hifz Ijazah <span class="course-duration">Custom</span>
+                  <span class="course-price">$129/mo</span>
+                </li>
+                <li>
+                  Tajweed Ijazah <span class="course-duration">Custom</span>
+                  <span class="course-price">$109/mo</span>
+                </li>
+                <a href="#" class="course-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Learning Path Section -->
+      <section class="learning-path">
+        <div class="container">
+          <h2 class="section-title">Your Learning Journey</h2>
+          <div class="path-container">
+            <div class="path-item">
+              <div class="path-icon">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <div class="path-content">
+                <h3>Assessment</h3>
+                <p>
+                  Begin with a free evaluation session where our teacher
+                  assesses your current level and recommends the appropriate
+                  starting point.
+                </p>
+              </div>
+            </div>
+            <div class="path-item">
+              <div class="path-icon">
+                <i class="fas fa-book-open"></i>
+              </div>
+              <div class="path-content">
+                <h3>Foundation</h3>
+                <p>
+                  Build strong fundamentals with proper pronunciation
+                  (Makharij), basic tajweed rules, and fluency in reading.
+                </p>
+              </div>
+            </div>
+            <div class="path-item">
+              <div class="path-icon">
+                <i class="fas fa-quran"></i>
+              </div>
+              <div class="path-content">
+                <h3>Application</h3>
+                <p>
+                  Apply tajweed rules in Quranic recitation, memorize selected
+                  surahs, and understand their meanings.
+                </p>
+              </div>
+            </div>
+            <div class="path-item">
+              <div class="path-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="path-content">
+                <h3>Mastery</h3>
+                <p>
+                  Progress to advanced recitation, complete memorization (Hifz),
+                  or obtain Ijazah certification in Quranic recitation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tutors Page -->
+    <div id="tutors" class="page-content">
+      <!-- Tutors Hero -->
+      <section class="tutors-hero">
+        <div class="container">
+          <h1>Meet Our Certified Tutors</h1>
+          <p>
+            Learn from qualified teachers who graduated from prestigious Islamic
+            universities with Ijazah certification
+          </p>
+        </div>
+      </section>
+
+      <!-- Tutors Section -->
+      <section class="tutors-section">
+        <div class="container">
+          <div class="tutor-filters">
+            <button class="filter-btn active">All</button>
+            <div class="tutor-card" data-category="Recitation"></div>
+
+            <button class="filter-btn">Recitation</button>
+            <button class="filter-btn">Tajweed</button>
+            <button class="filter-btn">Hifz</button>
+            <button class="filter-btn">Tafseer</button>
+          </div>
+
+          <!-- Tutor Cards Grid -->
+          <div class="tutors-grid">
+            <!-- Hafiza Amina -->
+            <div class="tutor-card" data-category="Tajweed">
+              <div class="tutor-img">
+                <img src="images/hafiza-amina.jpg" alt="Hafiza Amina" />
+              </div>
+              <div class="tutor-info">
+                <h3>Hafiza Amina</h3>
+                <div class="tutor-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="tutor-specialization">Tajweed Specialist</p>
+                <p class="tutor-bio">
+                  Graduate of Al-Azhar University with Ijazah in Hafs and Warsh
+                  recitation. 12 years of teaching experience.
+                </p>
+                <div class="tutor-skills">
+                  <span class="skill-tag">Hafs</span>
+                  <span class="skill-tag">Warsh</span>
+                  <span class="skill-tag">Tajweed</span>
+                </div>
+                <a
+                  href="#"
+                  class="tutor-view"
+                  onclick="openTutorModal()"
+                  data-img="images/hafiza-amina.jpg"
+                  >View Profile</a
+                >
+              </div>
+            </div>
+
+            <!-- Hafiz Ali -->
+            <div class="tutor-card" data-category="Hifz">
+              <div class="tutor-img">
+                <img src="images/hafiz-ali.jpg" alt="Hafiz Ali" />
+              </div>
+              <div class="tutor-info">
+                <h3>Hafiz Ali</h3>
+                <div class="tutor-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="tutor-specialization">Hifz Instructor</p>
+                <p class="tutor-bio">
+                  Memorized the Quran at age 15, certified in Qaloon recitation.
+                  Specializes in children's memorization.
+                </p>
+                <div class="tutor-skills">
+                  <span class="skill-tag">Hifz</span>
+                  <span class="skill-tag">Qaloon</span>
+                  <span class="skill-tag">Children</span>
+                </div>
+                <a
+                  href="#"
+                  class="tutor-view"
+                  onclick="openTutorModal(2)"
+                  data-img="images/hafiz-ali.jpg"
+                  >View Profile</a
+                >
+              </div>
+            </div>
+
+            <!-- Sheikh Oamr -->
+            <div class="tutor-card" data-category="Recitation">
+              <div class="tutor-img">
+                <img src="images/sheikh-omar.jpg" alt="Sheikh Omar" />
+              </div>
+              <div class="tutor-info">
+                <h3>Sheikh Omar</h3>
+                <div class="tutor-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <p class="tutor-specialization">Qira'at Expert</p>
+                <p class="tutor-bio">
+                  Specializes in the 10 Qira'at with Ijazah in all authentic
+                  chains. 15 years of teaching experience.
+                </p>
+                <div class="tutor-skills">
+                  <span class="skill-tag">Qira'at</span>
+                  <span class="skill-tag">Tajweed</span>
+                  <span class="skill-tag">Advanced</span>
+                </div>
+                <a href="#" class="tutor-view" onclick="openTutorModal(3)"
+                  >View Profile</a
+                >
+              </div>
+            </div>
+
+            <!-- Ustadha Fatima -->
+            <div class="tutor-card" data-category="Recitation">
+              <div class="tutor-img">
+                <img src="images/ustada-fatima.jpg" alt="Ustadha Fatima" />
+              </div>
+              <div class="tutor-info">
+                <h3>Ustadha Fatima</h3>
+                <div class="tutor-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="tutor-specialization">Beginners Specialist</p>
+                <p class="tutor-bio">
+                  Expert in teaching Quran reading from basics. Patient and
+                  friendly approach for new learners.
+                </p>
+                <div class="tutor-skills">
+                  <span class="skill-tag">Beginners</span>
+                  <span class="skill-tag">Kids</span>
+                  <span class="skill-tag">Adults</span>
+                </div>
+                <a href="#" class="tutor-view" onclick="openTutorModal(4)"
+                  >View Profile</a
+                >
+              </div>
+            </div>
+
+            <!-- Dr. Yusuf -->
+            <div class="tutor-card" data-category="Tafseer">
+              <div class="tutor-img">
+                <img src="images/dr.yusuf.jpg" alt="Dr. Yusuf" />
+              </div>
+              <div class="tutor-info">
+                <h3>Dr. Yusuf</h3>
+                <div class="tutor-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="tutor-specialization">Tafseer Scholar</p>
+                <p class="tutor-bio">
+                  PhD in Quranic Studies. Teaches word-by-word translation and
+                  in-depth tafseer of the Quran.
+                </p>
+                <div class="tutor-skills">
+                  <span class="skill-tag">Tafseer</span>
+                  <span class="skill-tag">Translation</span>
+                  <span class="skill-tag">Arabic</span>
+                </div>
+                <a href="#" class="tutor-view" onclick="openTutorModal(5)"
+                  >View Profile</a
+                >
+              </div>
+            </div>
+
+            <!-- Hafiz Ibrahim -->
+            <div class="tutor-card" data-category="Hifz">
+              <div class="tutor-img">
+                <img src="images/hafiz-ibrahim.jpg" alt="Hafiz Ibrahim" />
+              </div>
+              <div class="tutor-info">
+                <h3>Hafiz Ibrahim</h3>
+                <div class="tutor-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <p class="tutor-specialization">Memorization Coach</p>
+                <p class="tutor-bio">
+                  Developed unique memorization techniques. Helps students
+                  memorize efficiently with proper retention.
+                </p>
+                <div class="tutor-skills">
+                  <span class="skill-tag">Hifz</span>
+                  <span class="skill-tag">Memorization</span>
+                  <span class="skill-tag">Retention</span>
+                </div>
+                <a href="#" class="tutor-view" onclick="openTutorModal(6)"
+                  >View Profile</a
+                >
+              </div>
+            </div>
+
+            <!-- Sheikh Bilal -->
+            <div class="tutor-card" data-category="Tajweed">
+              <div class="tutor-img">
+                <img src="images/sheikh-bilal.jpg" alt="Sheikh Bilal" />
+              </div>
+              <div class="tutor-info">
+                <h3>Sheikh Bilal</h3>
+                <div class="tutor-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="tutor-specialization">Tajweed & Ijazah Instructor</p>
+                <p class="tutor-bio">
+                  Graduate of Madinah University, Ijazah holder in Shu'bah and
+                  Khalaf recitations. Known for his structured curriculum and
+                  deep understanding of Makharij and Sifat.
+                </p>
+                <div class="tutor-skills">
+                  <span class="skill-tag">Ijazah Training</span>
+                  <span class="skill-tag">Translation</span>
+                  <span class="skill-tag">Tajweed</span>
+                </div>
+                <a href="#" class="tutor-view" onclick="openTutorModal(7)"
+                  >View Profile</a
+                >
+              </div>
+            </div>
+
+            <!-- Ustadha Maryam -->
+            <div class="tutor-card" data-category="Tafseer">
+              <div class="tutor-img">
+                <img src="images/ustada-maryam.jpg" alt="Ustadha Maryam" />
+              </div>
+              <div class="tutor-info">
+                <h3>Ustadha Maryam</h3>
+                <div class="tutor-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="tutor-specialization">Female Tajweed & Tafseer</p>
+                <p class="tutor-bio">
+                  Al-Azhar alumna, certified in Hafs an Asim, passionate about
+                  teaching women and girls. Creates a nurturing and encouraging
+                  environment for tafseer and tajweed.
+                </p>
+                <div class="tutor-skills">
+                  <span class="skill-tag">Noorani Qaida</span>
+                  <span class="skill-tag">Tafseer</span>
+                  <span class="skill-tag">Tajweed</span>
+                </div>
+                <a href="#" class="tutor-view" onclick="openTutorModal(8)"
+                  >View Profile</a>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Tutor Modal -->
+      <div class="tutor-modal" id="tutor-modal">
+        <div class="modal-content">
+          <div class="modal-close" onclick="closeTutorModal(1)">
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="modal-header">
+            <img
+              src="images/hafiza-amina.jpg"
+              alt="Tutor"
+              class="modal-avatar"
+              id="modal-avatar"
+            />
+            <div>
+              <h2 id="modal-tutor-name">Hafiza Amina</h2>
+              <p class="modal-specialization" id="modal-specialization">
+                Tajweed Specialist
+              </p>
+              <div class="modal-rating" id="modal-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="modal-section">
+              <h3>About</h3>
+              <p class="modal-bio" id="modal-bio">
+                Graduate of Al-Azhar University with Ijazah in Hafs and Warsh
+                recitation. 12 years of teaching experience in various Islamic
+                institutes across the Middle East and Europe. Specializes in
+                teaching proper tajweed rules with practical application.
+              </p>
+            </div>
+            <div class="modal-section">
+              <h3>Qualifications</h3>
+              <ul class="modal-courses" id="modal-qualifications">
+                <li>Bachelor in Islamic Studies, Al-Azhar University</li>
+                <li>Ijazah in Hafs 'an 'Asim</li>
+                <li>Ijazah in Warsh 'an Nafi'</li>
+                <li>Certified Tajweed Instructor</li>
+              </ul>
+            </div>
+            <div class="modal-section">
+              <h3>Specializations</h3>
+              <div class="modal-skills" id="modal-skills">
+                <span class="modal-skill">Hafs Recitation</span>
+                <span class="modal-skill">Warsh Recitation</span>
+                <span class="modal-skill">Tajweed Rules</span>
+                <span class="modal-skill">Advanced Recitation</span>
+              </div>
+            </div>
+            <div class="modal-section">
+              <h3>Available Courses</h3>
+              <ul class="modal-courses" id="modal-courses">
+                <li>Basic Tajweed Rules <span>$59/month</span></li>
+                <li>Applied Tajweed <span>$69/month</span></li>
+                <li>Hafs Recitation <span>$79/month</span></li>
+                <li>Warsh Recitation <span>$89/month</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="cta-button">Book Trial Class</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page-content">
+      <!-- Contact Hero -->
+      <section class="contact-hero">
+        <div class="container">
+          <h1>Get In Touch</h1>
+          <p>
+            Have questions or want to enroll? Contact us today and we'll be
+            happy to assist you
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-container">
+            <div class="contact-info">
+              <h3>Contact Information</h3>
+              <div class="contact-method">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Our Location</h4>
+                  <p>123 Islamic Center, Madinah Road, Cairo, Egypt</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Email Us</h4>
+                  <p>info@purequranacademy.com</p>
+                  <p>support@purequranacademy.com</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="contact-icon">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Call Us</h4>
+                  <p>+20 123 456 7890</p>
+                  <p>+1 (123) 456-7890 (US)</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="contact-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Working Hours</h4>
+                  <p>Monday - Friday: 9am - 9pm</p>
+                  <p>Saturday - Sunday: 10am - 6pm</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form-container">
+              <h3>Send Us a Message</h3>
+              <form class="contact-form">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Your email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" placeholder="Your phone" />
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <select id="subject" required>
+                    <option value="">Select a subject</option>
+                    <option value="enrollment">Course Enrollment</option>
+                    <option value="information">General Information</option>
+                    <option value="support">Technical Support</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Your Message</label>
+                  <textarea
+                    id="message"
+                    placeholder="Write your message here..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Message</button>
+              </form>
+            </div>
+          </div>
+          <div class="map-container">
+            <div class="map-placeholder">
+              <i class="fas fa-map-marked-alt"></i>
+              <p>Interactive map would be displayed here</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Dashboard Pages -->
+    <div id="dashboard" class="page-content">
+      <div class="dashboard">
+        <div class="sidebar">
+          <div class="sidebar-header">
+            <div class="sidebar-avatar">AS</div>
+            <div class="sidebar-user">
+              <h4>Ahmed Student</h4>
+              <p>Premium Member</p>
+            </div>
+          </div>
+          <div class="sidebar-menu">
+            <h3>Main Menu</h3>
+            <a href="#" class="active" onclick="showDashboard('profile')"
+              ><i class="fas fa-user"></i> <span>Profile</span></a
+            >
+            <a href="#" onclick="showDashboard('courses')"
+              ><i class="fas fa-book-open"></i> <span>My Courses</span></a
+            >
+            <a href="#" onclick="showDashboard('progress')"
+              ><i class="fas fa-chart-line"></i> <span>Progress</span></a
+            >
+            <a href="#" onclick="showDashboard('schedule')"
+              ><i class="fas fa-calendar-alt"></i> <span>Schedule</span></a
+            >
+            <a href="#" onclick="showDashboard('assignments')"
+              ><i class="fas fa-tasks"></i> <span>Assignments</span></a
+            >
+
+            <h3>Resources</h3>
+            <a href="#" onclick="showDashboard('materials')"
+              ><i class="fas fa-book"></i> <span>Learning Materials</span></a
+            >
+            <a href="#" onclick="showDashboard('recordings')"
+              ><i class="fas fa-video"></i> <span>Class Recordings</span></a
+            >
+            <a href="#" onclick="showDashboard('certificates')"
+              ><i class="fas fa-certificate"></i> <span>Certificates</span></a
+            >
+
+            <h3>Account</h3>
+            <a href="#" onclick="showDashboard('payments')"
+              ><i class="fas fa-credit-card"></i> <span>Payments</span></a
+            >
+            <a href="#" onclick="showDashboard('settings')"
+              ><i class="fas fa-cog"></i> <span>Settings</span></a
+            >
+            <a href="#" id="logout-btn-sidebar"
+              ><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a
+            >
+          </div>
+        </div>
+        <div class="main-content">
+          <!-- Dashboard Profile -->
+          <div id="dashboard-profile" class="dashboard-section active">
+            <div class="dashboard-header">
+              <h2 class="dashboard-title">My Profile</h2>
+              <a href="#" class="cta-button">Edit Profile</a>
+            </div>
+
+            <div class="dashboard-stats">
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-book-quran"></i>
+                </div>
+                <div class="stat-info">
+                  <h3>4</h3>
+                  <p>Active Courses</p>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-info">
+                  <h3>32</h3>
+                  <p>Hours Completed</p>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-info">
+                  <h3>4.8</h3>
+                  <p>Average Rating</p>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="stat-info">
+                  <h3>2</h3>
+                  <p>Classes This Week</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-section">
+              <div class="section-header">
+                <h3>Personal Information</h3>
+              </div>
+              <div class="profile-grid">
+                <div class="profile-info">
+                  <div class="info-item">
+                    <label>Full Name:</label>
+                    <p>Ahmed Student</p>
+                  </div>
+                  <div class="info-item">
+                    <label>Email:</label>
+                    <p>ahmed.student@example.com</p>
+                  </div>
+                  <div class="info-item">
+                    <label>Phone:</label>
+                    <p>+1 (123) 456-7890</p>
+                  </div>
+                  <div class="info-item">
+                    <label>Country:</label>
+                    <p>United States</p>
+                  </div>
+                  <div class="info-item">
+                    <label>Timezone:</label>
+                    <p>Eastern Time (ET)</p>
+                  </div>
+                </div>
+                <div class="profile-avatar">
+                  <div class="avatar-container">
+                    <img
+                      src="https://via.placeholder.com/150x150"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-section">
+              <div class="section-header">
+                <h3>Current Courses</h3>
+                <a href="#" onclick="showDashboard('courses')">View All</a>
+              </div>
+              <div class="courses-grid">
+                <div class="course-card">
+                  <div class="course-img">
+                    <img
+                      src="https://via.placeholder.com/400x300"
+                      alt="Course"
+                    />
+                    <span class="course-badge">Active</span>
+                  </div>
+                  <div class="course-info">
+                    <h4>Tajweed Mastery</h4>
+                    <div class="course-meta">
+                      <span><i class="fas fa-user"></i> Hafiza Amina</span>
+                      <span><i class="fas fa-calendar"></i> Mon/Wed</span>
+                    </div>
+                    <div class="course-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%"></div>
+                      </div>
+                      <div class="progress-text">65% Complete</div>
+                    </div>
+                    <a href="#" class="course-btn">Continue Learning</a>
+                  </div>
+                </div>
+                <div class="course-card">
+                  <div class="course-img">
+                    <img
+                      src="https://via.placeholder.com/400x300"
+                      alt="Course"
+                    />
+                    <span class="course-badge">Active</span>
+                  </div>
+                  <div class="course-info">
+                    <h4>Hifz Program - Juz 28</h4>
+                    <div class="course-meta">
+                      <span><i class="fas fa-user"></i> Hafiz Ali Raza</span>
+                      <span><i class="fas fa-calendar"></i> Tue/Thu</span>
+                    </div>
+                    <div class="course-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 42%"></div>
+                      </div>
+                      <div class="progress-text">42% Complete</div>
+                    </div>
+                    <a href="#" class="course-btn">Continue Learning</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboard Courses -->
+          <div id="dashboard-courses" class="dashboard-section">
+            <div class="dashboard-header">
+              <h2 class="dashboard-title">My Courses</h2>
+            </div>
+
+            <div class="dashboard-section">
+              <div class="section-header">
+                <h3>Active Courses</h3>
+              </div>
+              <div class="courses-grid">
+                <div class="course-card">
+                  <div class="course-img">
+                    <img
+                      src="https://via.placeholder.com/400x300"
+                      alt="Course"
+                    />
+                    <span class="course-badge">Active</span>
+                  </div>
+                  <div class="course-info">
+                    <h4>Tajweed Mastery</h4>
+                    <div class="course-meta">
+                      <span><i class="fas fa-user"></i> Sheikh Abdullah</span>
+                      <span><i class="fas fa-calendar"></i> Mon/Wed</span>
+                    </div>
+                    <div class="course-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%"></div>
+                      </div>
+                      <div class="progress-text">65% Complete</div>
+                    </div>
+                    <a href="#" class="course-btn">Continue Learning</a>
+                  </div>
+                </div>
+                <div class="course-card">
+                  <div class="course-img">
+                    <img
+                      src="https://via.placeholder.com/400x300"
+                      alt="Course"
+                    />
+                    <span class="course-badge">Active</span>
+                  </div>
+                  <div class="course-info">
+                    <h4>Hifz Program - Juz 28</h4>
+                    <div class="course-meta">
+                      <span><i class="fas fa-user"></i> Hafiza Amina</span>
+                      <span><i class="fas fa-calendar"></i> Tue/Thu</span>
+                    </div>
+                    <div class="course-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 42%"></div>
+                      </div>
+                      <div class="progress-text">42% Complete</div>
+                    </div>
+                    <a href="#" class="course-btn">Continue Learning</a>
+                  </div>
+                </div>
+                <div class="course-card">
+                  <div class="course-img">
+                    <img
+                      src="https://via.placeholder.com/400x300"
+                      alt="Course"
+                    />
+                    <span class="course-badge">Active</span>
+                  </div>
+                  <div class="course-info">
+                    <h4>Quran Translation</h4>
+                    <div class="course-meta">
+                      <span><i class="fas fa-user"></i> Dr. Yusuf</span>
+                      <span><i class="fas fa-calendar"></i> Sat</span>
+                    </div>
+                    <div class="course-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 28%"></div>
+                      </div>
+                      <div class="progress-text">28% Complete</div>
+                    </div>
+                    <a href="#" class="course-btn">Continue Learning</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-section">
+              <div class="section-header">
+                <h3>Completed Courses</h3>
+              </div>
+              <div class="courses-grid">
+                <div class="course-card">
+                  <div class="course-img">
+                    <img
+                      src="https://via.placeholder.com/400x300"
+                      alt="Course"
+                    />
+                    <span
+                      class="course-badge"
+                      style="background: #6c757d; color: white"
+                      >Completed</span
+                    >
+                  </div>
+                  <div class="course-info">
+                    <h4>Basic Tajweed Rules</h4>
+                    <div class="course-meta">
+                      <span><i class="fas fa-user"></i> Ustadha Fatima</span>
+                      <span
+                        ><i class="fas fa-calendar"></i> Completed: Jan
+                        2023</span
+                      >
+                    </div>
+                    <div class="course-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                      </div>
+                      <div class="progress-text">100% Complete</div>
+                    </div>
+                    <a href="#" class="course-btn">View Certificate</a>
+                  </div>
+                </div>
+                <div class="course-card">
+                  <div class="course-img">
+                    <img
+                      src="https://via.placeholder.com/400x300"
+                      alt="Course"
+                    />
+                    <span
+                      class="course-badge"
+                      style="background: #6c757d; color: white"
+                      >Completed</span
+                    >
+                  </div>
+                  <div class="course-info">
+                    <h4>Quran Reading Basics</h4>
+                    <div class="course-meta">
+                      <span><i class="fas fa-user"></i> Ustadha Fatima</span>
+                      <span
+                        ><i class="fas fa-calendar"></i> Completed: Aug
+                        2022</span
+                      >
+                    </div>
+                    <div class="course-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                      </div>
+                      <div class="progress-text">100% Complete</div>
+                    </div>
+                    <a href="#" class="course-btn">View Certificate</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboard Progress -->
+          <div id="dashboard-progress" class="dashboard-section">
+            <div class="dashboard-header">
+              <h2 class="dashboard-title">My Progress</h2>
+            </div>
+
+            <div class="dashboard-section">
+              <div class="section-header">
+                <h3>Learning Analytics</h3>
+              </div>
+              <div class="analytics-container">
+                <canvas id="progress-chart" height="300"></canvas>
+              </div>
+            </div>
+
+            <div class="dashboard-section">
+              <div class="section-header">
+                <h3>Recent Activity</h3>
+              </div>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Activity</th>
+                      <th>Course</th>
+                      <th>Duration</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>May 15, 2023</td>
+                      <td>Class: Lesson 12 - Ghunnah Rules</td>
+                      <td>Tajweed Mastery</td>
+                      <td>60 min</td>
+                      <td>
+                        <span class="status-badge status-active"
+                          >Completed</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>May 13, 2023</td>
+                      <td>Assignment: Surah Al-Fajr Recitation</td>
+                      <td>Hifz Program</td>
+                      <td>45 min</td>
+                      <td>
+                        <span class="status-badge status-active"
+                          >Submitted</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>May 12, 2023</td>
+                      <td>Class: Juz 28 Page 3 Memorization</td>
+                      <td>Hifz Program</td>
+                      <td>60 min</td>
+                      <td>
+                        <span class="status-badge status-active"
+                          >Completed</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>May 10, 2023</td>
+                      <td>Class: Lesson 11 - Qalqalah</td>
+                      <td>Tajweed Mastery</td>
+                      <td>60 min</td>
+                      <td>
+                        <span class="status-badge status-active"
+                          >Completed</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>May 8, 2023</td>
+                      <td>Self-Study: Surah Al-Baqarah 1-10</td>
+                      <td>Hifz Program</td>
+                      <td>30 min</td>
+                      <td>
+                        <span class="status-badge status-completed"
+                          >Recorded</span
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboard Certificates -->
+          <div id="dashboard-certificates" class="dashboard-section">
+            <div class="dashboard-header">
+              <h2 class="dashboard-title">My Certificates</h2>
+            </div>
+
+            <div class="dashboard-section">
+              <div class="section-header">
+                <h3>Issued Certificates</h3>
+              </div>
+              <div class="certificate">
+                <div class="certificate-header">
+                  <img src="images/Certificate-logo.png" alt="Academy Logo" />
+                  <h2>Certificate of Completion</h2>
+                  <p>
+                    This is to certify that the student has successfully
+                    completed the course requirements
+                  </p>
+                </div>
+                <div class="certificate-body">
+                  <h3>Basic Tajweed Rules</h3>
+                  <p>
+                    Awarded to <strong>Ahmed Student</strong> for successfully
+                    completing the Basic Tajweed Rules course with excellent
+                    performance and dedication from January 2022 to April 2022
+                    under the guidance of Ustadha Fatima.
+                  </p>
+                  <p>
+                    The student has demonstrated proficiency in the fundamental
+                    rules of Tajweed including proper pronunciation (Makharij),
+                    characteristics of letters (Sifaat), and basic rules of Noon
+                    Sakinah and Tanween.
+                  </p>
+                </div>
+                <div class="certificate-signatures">
+                  <div class="signature">
+                    <p>Ustadha Fatima</p>
+                    <div class="signature-line"></div>
+                    <p>Instructor</p>
+                  </div>
+                  <div class="signature">
+                    <p>Hafiz Abdul Hadi</p>
+                    <div class="signature-line"></div>
+                    <p>Head of Education</p>
+                  </div>
+                </div>
+                <div class="certificate-footer">
+                  Certificate ID: PQA-2022-04582 | Issued on: April 15, 2022
+                </div>
+              </div>
+              <div class="certificate-actions">
+                <a href="#" class="cta-button">Download PDF</a>
+                <a href="#" class="cta-button secondary">Share Certificate</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboard Payments -->
+          <div id="dashboard-payments" class="dashboard-section">
+            <div class="dashboard-header">
+              <h2 class="dashboard-title">Payment History</h2>
+            </div>
+
+            <div class="dashboard-section">
+              <div class="section-header">
+                <h3>Upcoming Payments</h3>
+              </div>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Due Date</th>
+                      <th>Description</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>June 1, 2023</td>
+                      <td>Tajweed Mastery - Monthly Fee</td>
+                      <td>$79.00</td>
+                      <td>
+                        <span class="status-badge status-pending">Pending</span>
+                      </td>
+                      <td>
+                        <a href="#" class="action-btn action-primary"
+                          >Pay Now</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>June 1, 2023</td>
+                      <td>Hifz Program - Monthly Fee</td>
+                      <td>$99.00</td>
+                      <td>
+                        <span class="status-badge status-pending">Pending</span>
+                      </td>
+                      <td>
+                        <a href="#" class="action-btn action-primary"
+                          >Pay Now</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="dashboard-section">
+              <div class="section-header">
+                <h3>Payment History</h3>
+              </div>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Invoice #</th>
+                      <th>Description</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                      <th>Receipt</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>May 1, 2023</td>
+                      <td>INV-2023-0582</td>
+                      <td>Tajweed Mastery - Monthly Fee</td>
+                      <td>$79.00</td>
+                      <td>
+                        <span class="status-badge status-active">Paid</span>
+                      </td>
+                      <td>
+                        <a href="#" class="action-btn action-secondary">View</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>May 1, 2023</td>
+                      <td>INV-2023-0583</td>
+                      <td>Hifz Program - Monthly Fee</td>
+                      <td>$99.00</td>
+                      <td>
+                        <span class="status-badge status-active">Paid</span>
+                      </td>
+                      <td>
+                        <a href="#" class="action-btn action-secondary">View</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>April 1, 2023</td>
+                      <td>INV-2023-0421</td>
+                      <td>Tajweed Mastery - Monthly Fee</td>
+                      <td>$79.00</td>
+                      <td>
+                        <span class="status-badge status-active">Paid</span>
+                      </td>
+                      <td>
+                        <a href="#" class="action-btn action-secondary">View</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>April 1, 2023</td>
+                      <td>INV-2023-0422</td>
+                      <td>Hifz Program - Monthly Fee</td>
+                      <td>$99.00</td>
+                      <td>
+                        <span class="status-badge status-active">Paid</span>
+                      </td>
+                      <td>
+                        <a href="#" class="action-btn action-secondary">View</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login/Register Modal -->
+    <div class="auth-modal" id="auth-modal">
+      <div class="auth-container">
+        <div class="auth-close" id="auth-close">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="auth-header">
+          <h2>Welcome to Pure Quran Academy</h2>
+          <p>Please login or register to continue</p>
+        </div>
+        <div class="auth-tabs">
+          <div class="auth-tab active" data-tab="login">Login</div>
+          <div class="auth-tab" data-tab="register">Register</div>
+        </div>
+        <div class="auth-body">
+          <form class="auth-form active" id="login-form">
+            <div class="form-group">
+              <label for="login-email">Email Address</label>
+              <input
+                type="email"
+                id="login-email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="login-password">Password</label>
+              <input
+                type="password"
+                id="login-password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <button type="submit" class="form-submit">Login</button>
+            </div>
+            <div class="form-group" style="text-align: center">
+              <a href="#" style="color: var(--primary)">Forgot Password?</a>
+            </div>
+          </form>
+          <form class="auth-form" id="register-form">
+            <div class="form-group">
+              <label for="register-name">Full Name</label>
+              <input
+                type="text"
+                id="register-name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="register-email">Email Address</label>
+              <input
+                type="email"
+                id="register-email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="register-password">Password</label>
+              <input
+                type="password"
+                id="register-password"
+                placeholder="Create a password"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="register-confirm">Confirm Password</label>
+              <input
+                type="password"
+                id="register-confirm"
+                placeholder="Confirm your password"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="register-country">Country</label>
+              <select id="register-country" required>
+                <option value="">Select your country</option>
+                <option value="US">United States</option>
+                <option value="UK">United Kingdom</option>
+                <option value="AU">United Arab Emirates</option>
+                <option value="CA">Canada</option>
+                <option value="AU">Australia</option>
+                <option value="AU">Pakistan</option>
+                <option value="AU">Turkey</option>
+                <!-- More countries would be added here -->
+              </select>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="form-submit">Register</button>
+            </div>
+          </form>
+        </div>
+        <div class="auth-footer">
+          <p>
+            By continuing, you agree to our <a href="#">Terms of Service</a> and
+            <a href="#">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: var(--secondary); color: white; padding: 4rem 0">
+      <div class="container">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+          "
+        >
+          <div>
+            <h3 style="color: var(--accent); margin-bottom: 1.5rem">
+              Pure Quran Academy
+            </h3>
+            <p style="margin-bottom: 1rem">
+              Making Quran education accessible to everyone worldwide with
+              authentic teaching methods.
+            </p>
+            <div style="display: flex; gap: 1rem">
+              <a href="#" style="color: white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" style="color: white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" style="color: white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" style="color: white"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h3 style="color: var(--accent); margin-bottom: 1.5rem">
+              Quick Links
+            </h3>
+            <ul style="list-style: none">
+              <li style="margin-bottom: 0.8rem">
+                <a
+                  href="#"
+                  style="color: white; text-decoration: none"
+                  onclick="showPage('home')"
+                  >Home</a
+                >
+              </li>
+              <li style="margin-bottom: 0.8rem">
+                <a
+                  href="#"
+                  style="color: white; text-decoration: none"
+                  onclick="showPage('about')"
+                  >About Us</a
+                >
+              </li>
+              <li style="margin-bottom: 0.8rem">
+                <a
+                  href="#"
+                  style="color: white; text-decoration: none"
+                  onclick="showPage('courses')"
+                  >Courses</a
+                >
+              </li>
+              <li style="margin-bottom: 0.8rem">
+                <a
+                  href="#"
+                  style="color: white; text-decoration: none"
+                  onclick="showPage('tutors')"
+                  >Tutors</a
+                >
+              </li>
+              <li style="margin-bottom: 0.8rem">
+                <a
+                  href="#"
+                  style="color: white; text-decoration: none"
+                  onclick="showPage('contact')"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="color: var(--accent); margin-bottom: 1.5rem">Courses</h3>
+            <ul style="list-style: none">
+              <li style="margin-bottom: 0.8rem">
+                <a href="#" style="color: white; text-decoration: none"
+                  >Quran Recitation</a
+                >
+              </li>
+              <li style="margin-bottom: 0.8rem">
+                <a href="#" style="color: white; text-decoration: none"
+                  >Tajweed Rules</a
+                >
+              </li>
+              <li style="margin-bottom: 0.8rem">
+                <a href="#" style="color: white; text-decoration: none"
+                  >Hifz Program</a
+                >
+              </li>
+              <li style="margin-bottom: 0.8rem">
+                <a href="#" style="color: white; text-decoration: none"
+                  >Quran Translation</a
+                >
+              </li>
+              <li style="margin-bottom: 0.8rem">
+                <a href="#" style="color: white; text-decoration: none"
+                  >Kids Program</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="color: var(--accent); margin-bottom: 1.5rem">
+              Contact Us
+            </h3>
+            <p style="margin-bottom: 0.8rem">
+              <i class="fas fa-map-marker-alt" style="margin-right: 0.5rem"></i>
+              Markaz-e-Mustafa Near Pindi Bypass, Lohian Wala, Gujranwala,
+              Pakistan
+            </p>
+            <p style="margin-bottom: 0.8rem">
+              <i class="fas fa-phone-alt" style="margin-right: 0.5rem"></i> +92
+              123 456 7890
+            </p>
+            <p style="margin-bottom: 0.8rem">
+              <i class="fas fa-envelope" style="margin-right: 0.5rem"></i>
+              info@purequranacademy.com
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+          "
+        >
+          <p>&copy; 2025 Pure Quran Academy. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JS File Connected -->
+    <script src="script.js"></script>
+  </body>
+</html>
